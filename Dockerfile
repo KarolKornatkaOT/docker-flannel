@@ -1,6 +1,14 @@
-FROM busybox:1.25.0-glibc
+FROM oberthur/docker-ubuntu:16.04
+MAINTAINER Lukasz Bielinski <l.bielinski@oberthur.com>
 
 MAINTAINER Tom Denham <tom@tigera.io>
+
+RUN apt-get update \
+    && apt-get -y upgrade \
+    && apt-get clean autoclean \
+    && apt-get autoremove --yes \
+    && rm -rf /var/lib/{apt,dpkg,cache,log}
+
 
 COPY dist/flanneld-amd64 /opt/bin/flanneld
 COPY dist/iptables-amd64 /usr/local/bin/iptables
