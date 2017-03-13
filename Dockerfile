@@ -10,9 +10,9 @@ RUN apt-get update \
     && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 
-COPY dist/flanneld-amd64 /opt/bin/flanneld
-COPY dist/iptables-amd64 /usr/local/bin/iptables
-COPY dist/mk-docker-opts.sh /opt/bin/
-COPY dist/libpthread.so.0-amd64 /lib/libpthread.so.0
+COPY flannel/dist/flanneld-amd64 /opt/bin/flanneld
+COPY flannel/dist/iptables-amd64 /usr/local/bin/iptables
+COPY flannel/dist/mk-docker-opts.sh /opt/bin/
+COPY flannel/dist/libpthread.so.0-amd64 /lib/libpthread.so.0
 CMD ["/opt/bin/flanneld"]
 
