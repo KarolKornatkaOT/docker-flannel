@@ -1,7 +1,7 @@
 FROM oberthur/docker-ubuntu:16.04
 MAINTAINER Lukasz Bielinski <l.bielinski@oberthur.com>
 
-ENV _FLANNEL_VERSION=v0.7.0
+ENV _FLANNEL_VERSION=v0.7.1
 
 RUN apt-get update \
     && apt-get -y install iptables \
