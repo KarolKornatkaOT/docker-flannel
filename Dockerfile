@@ -13,7 +13,8 @@ RUN apt-get update \
 
     # add flanneld
     && mkdir -p /opt/bin \
-    && curl -L https://github.com/coreos/flannel/releases/download/${FLANNEL_VERSION}/flanneld-amd64 -o /opt/bin/flanneld
+    && curl -L https://github.com/coreos/flannel/releases/download/${FLANNEL_VERSION}/flanneld-amd64 -o /opt/bin/flanneld \
+    && chmod +x /opt/bin/flanneld
 
 CMD ["/opt/bin/flanneld"]
 
