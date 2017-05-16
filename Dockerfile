@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log} \
-    && curl -L https://github.com/coreos/flannel/releases/download/${_FLANNEL_VERSION}/flanneld-amd64 -o /usr/local/bin/flanneld
+    && curl -L https://github.com/coreos/flannel/releases/download/${_FLANNEL_VERSION}/flanneld-amd64 -o /opt/bin/flanneld
 
 CMD ["/usr/local/bin/flanneld"]
 
