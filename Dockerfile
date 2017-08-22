@@ -1,4 +1,4 @@
-FROM oberthur/docker-ubuntu:16.04
+FROM oberthur/docker-ubuntu:16.04-20170515 
 MAINTAINER Lukasz Bielinski <l.bielinski@oberthur.com>
 
 ENV FLANNEL_VERSION=v0.8.0
